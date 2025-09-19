@@ -1,0 +1,10 @@
+nav {
+  display: flex !important;
+  justify-content: center;
+  flex-direction: row;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* stack images vertically */
+  }
+}

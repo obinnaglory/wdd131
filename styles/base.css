@@ -7,11 +7,11 @@ body {
 }
 
 header {
-  width: 100%;
-  box-sizing: border-box;
+  width: 110%;
+  box-sizing: 200px;
   background-color: #005f73; /* or your preferred color */
   color: white;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 
@@ -34,8 +34,8 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #0a9396;
-  border-radius: 5px;
+  background-color: green;
+  border-radius: 20px;
 }
 
 main {
@@ -45,31 +45,36 @@ main {
   gap: 2rem;
 }
 
-.card {
-  background-color: white;
+.card1 {
+  flex-direction:left ;
+  background-color: gray;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 footer {
+  width: 114%;
   text-align: center;
   padding: 1rem;
   background-color: #005f73;
   color: white;
 }
 .card-container {
-  width:100%;
-  padding-right: 1rem;
+  text-align: left;
+  width:2px;
+  padding-right: 2rem;
   margin-right: 2rem;
   display: grid;
   grid-template-columns: 1fr 0.1fr;
   gap: 2rem;
+  min-width: 200px;
 }
 
-.card {
+.card2 {
+  size-adjust: 2000px;
   background-color: white;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(2,2,2,0.1);
 }
