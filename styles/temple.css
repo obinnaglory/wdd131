@@ -1,0 +1,103 @@
+/* Global styles */
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Acme', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Nav (mobile) */
+#hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #444;
+}
+
+#nav-menu.show {
+  display: flex;
+}
+
+#nav-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Temple grid - mobile = 1 column */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Figures */
+figure {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.85rem;
+}
