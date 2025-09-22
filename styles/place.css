@@ -1,0 +1,171 @@
+/* Global variables */
+:root{
+  --accent: #0b7285;
+  --muted: #6c757d;
+  --bg: #fbfbfb;
+  --card-bg: #ffffff;
+  --max-width: 1100px;
+  --gap: 1rem;
+  --radius: 10px;
+  --wrap-padding: 1rem;
+}
+
+/* Basic reset & layout */
+* {box-sizing: border-box;}
+html,body {height:100%;}
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  background:var(--bg);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap {
+  width: calc(100% - 2 * var(--wrap-padding));
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--wrap-padding);
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(90deg,var(--accent), #075985);
+  color:#fff;
+}
+.site-title {
+  margin: 0;
+  padding: 1rem 0;
+  font-family: "Playfair Display", serif;
+  font-weight:600;
+  text-align: center;
+}
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight:600;
+  padding: 0.25rem 0.5rem;
+}
+.main-nav a:hover {opacity:0.9; text-decoration: underline;}
+
+/* HERO */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 6px solid rgba(0,0,0,0.04);
+}
+.hero img { display:auto; width:100%; height:auto; object-fit:cover; }
+
+/* hero caption overlay */
+.hero-caption {
+  position: relative;
+  padding: 1rem;
+  text-align:center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.0), rgba(0,0,0,0.05));
+}
+.hero-caption h2 { margin: 0.25rem 0; font-size: 1.25rem; color: #073642; }
+.lede { margin: 3.5rem 0 0; color: black; }
+
+/* page grid: single column on mobile */
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  margin-top: 1rem;
+}
+
+/* content card */
+.place-info {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(11, 114, 133, 0.06);
+}
+.place-info h3 { margin-top: 0; color: var(--accent); }
+.gallery {
+  display:flex;
+  gap:0.5rem;
+  margin-top:0.5rem;
+}
+.gallery img {
+  width: 32%;
+  border-radius: 6px;
+  display:block;
+}
+
+/* aside weather card */
+.weather-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.weather-mobile-icon { display:block; }
+.weather-mobile-icon svg { width:64px; height:64px; }
+.weather-data .temp { font-size:2rem; margin:0; color:var(--accent); }
+.weather-data p { margin:0.25rem 0; color:var(--muted); }
+
+/* footer */
+.site-footer {
+  margin-top: 1.5rem;
+  background: #f2f6f7;
+  padding: 1rem 0;
+  color: #444;
+  text-align:center;
+}
+
+/* PSEUDO ELEMENT (for wider view) - used to show emoticon after the "Weather" heading.
+   The heading in the aside has id="weatherHeading" so we can target it. */
+#weatherHeading::after {
+  content: '';
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+
+/* Responsive: wider screens (desktop/tablet) */
+@media (min-width: 700px) {
+  /* layout: 2-column grid: main content (2fr) + aside (1fr) */
+  .page-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+
+  /* hero overlay caption alignment for wider screens */
+  .hero-caption {
+    text-align: left;
+    padding: 2rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(255,255,255,0.0);
+  }
+
+  .wrap { padding-left: 2rem; padding-right: 2rem; }
+
+  /* Hide mobile inline SVG icon on wider screens (we will show emoticon via pseudo-element) */
+  .weather-mobile-icon { display: none; }
+
+  /* Add the emoticon via pseudo-element after Weather heading */
+  #weatherHeading::after {
+    content: " ⛅"; /* emoticon required for the wide view by assignment */
+    font-size: 1.25rem;
+  }
+
+  /* gallery show larger thumbnails */
+  .gallery img { width: 32%; }
+
+  /* Improve nav alignment on wide screens */
+  .main-nav { justify-content: flex-end; padding-right: 2rem; }
+  .site-title { text-align: left; padding-left: 2rem; }
+}
