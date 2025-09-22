@@ -169,3 +169,37 @@ body {
   .main-nav { justify-content: flex-end; padding-right: 2rem; }
   .site-title { text-align: left; padding-left: 2rem; }
 }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #075985;
+}
+
+#confirmation {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+}

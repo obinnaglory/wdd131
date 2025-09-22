@@ -23,3 +23,12 @@ if (typeof temperatureC === 'number' && typeof windKmh === 'number' && temperatu
 } else {
   windChillEl.textContent = "N/A";
 }
+const temp = parseInt(document.getElementById("tempValue").textContent);
+
+if (temp < 10) {
+  document.querySelector(".note").textContent = "It's chilly today! Bundle up.";
+} else if (temp > 30) {
+  document.querySelector(".note").textContent = "Hot day ahead! Stay hydrated.";
+} else {
+  document.querySelector(".note").textContent = "Mild weather. Enjoy your day!";
+}
