@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site Plan — CleanTown Water Initiative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary-color: #0B6E4F; /* deep green - brand and headings */
+      --accent-color: #FFB703;  /* warm yellow - call-to-action, accents */
+      --muted: #F6F8F7;         /* light background */
+      --text: #072227;          /* dark text */
+      --card-border: #DDEDE9;
+      --max-width: 980px;
+      --gap: 1rem;
+    }
+    html,body{height:100%;}
+    body{
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:var(--text);
+      background:linear-gradient(180deg,var(--muted),#fff);
+      margin:0; padding:2rem; display:flex; justify-content:center;
+    }
+    .container{max-width:var(--max-width); width:100%;}
+
+    header.site-hero{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
+    .logo{display:flex;align-items:center;gap:.75rem}
+    .logo svg{width:56px;height:56px}
+    h1{font-family:'Merriweather', 'Times New Roman', serif; color:var(--primary-color); margin:0; font-size:1.5rem}
+    p.lead{margin:0; color:#234; opacity:.9}
+
+    .meta{display:flex;gap:var(--gap);margin:1rem 0 1.5rem;flex-wrap:wrap}
+    .card{background:white;border:1px solid var(--card-border);padding:1rem;border-radius:8px}
+
+    section{margin-bottom:1.25rem}
+    h2{margin:0 0 .5rem 0;font-family:'Merriweather',serif;color:var(--primary-color)}
+    ul{margin:0 0 0 1.25rem}
+
+    /* Color swatches */
+    .swatches{display:flex;gap:.75rem;align-items:center}
+    .swatch{width:80px;height:48px;border-radius:6px;box-shadow:0 1px 0 rgba(0,0,0,.04);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff}
+    .swatch-label{font-size:.8rem;margin-top:.35rem;text-align:center}
+
+    /* Typography preview */
+    .type-sample{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .type-card{padding:.5rem}
+
+    /* Wireframe visuals */
+    .wireframes{display:flex;gap:1rem;flex-wrap:wrap}
+    .wireframe{flex:1;min-width:240px;border:2px dashed var(--card-border);padding:12px;border-radius:6px;background:#fff}
+    .wf-block{border:1px solid var(--card-border);background:linear-gradient(180deg,#fff,#fbfffc);padding:.5rem;margin:.5rem 0;border-radius:4px;text-align:center;color:#666}
+    .wf-header{background:var(--primary-color);color:white}
+    .wf-cta{background:var(--accent-color);color:#072227}
+
+    /* footer */
+    footer{margin-top:2rem;font-size:.85rem;color:#3b4}
+
+    /* small screens */
+    @media (max-width:640px){
+      .type-sample{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="site-hero">
+      <div class="logo">
+        <!-- simple inline SVG logo (placeholder) -->
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#0B6E4F" />
+              <stop offset="1" stop-color="#2FA271" />
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="28" r="18" fill="url(#g)" />
+          <path d="M18 40c4 3 12 5 22 0" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <h1>Glory's CleanTown Water Initiative</h1>
+          <p class="lead">Community-focused water system planning, education, and volunteer resources.</p>
+        </div>
+      </div>
+      <div style="margin-left:auto;text-align:right;font-size:.85rem;color:#445">Optional domain: <strong>cleantownwater.org</strong></div>
+    </header>
+
+    <!-- SITE PURPOSE -->
+    <section class="card">
+      <h2>Site Purpose</h2>
+      <p>This site will serve as the project hub for the CleanTown Water Initiative. It will provide:</p>
+      <ul>
+        <li>Project overview and timeline for building the town's elevated water tank.</li>
+        <li>Technical resources and downloadable engineering plans for volunteers.</li>
+        <li>Volunteer sign-up and scheduling for installation and maintenance tasks.</li>
+        <li>Community FAQ and contact form for residents seeking water access information.</li>
+      </ul>
+    </section>
+
+    <!-- SCENARIOS -->
+    <section class="card">
+      <h2>Scenarios (User Questions)</h2>
+      <ol>
+        <li><strong>Where can I volunteer next weekend?</strong><br/>Users need an easy way to find upcoming volunteer shifts and sign up.</li>
+        <li><strong>How much water pressure will I get at my home?</strong><br/>Residents want a calculator or simplified explanation of expected water pressure based on their location.</li>
+        <li><strong>Where can I download the engineering drawings?</strong><br/>Contractors and technical volunteers need a downloads page with versioned CAD/PDF files.</li>
+      </ol>
+    </section>
+
+    <!-- COLOR SCHEMA -->
+    <section class="card">
+      <h2>Color Schema (used on this document)</h2>
+      <div class="swatches">
+        <div>
+          <div class="swatch" style="background:var(--primary-color);">Primary</div>
+          <div class="swatch-label">Used for headings, logo, primary buttons</div>
+        </div>
+        <div>
+          <div class="swatch" style="background:var(--accent-color);border:1px solid #EAAE39;color:#072227">Accent</div>
+          <div class="swatch-label">Used for CTAs, highlights, icons</div>
+        </div>
+        <div style="margin-left:1rem;align-self:center;font-size:.9rem;color:#334">Backgrounds: <code>#F6F8F7</code> / Cards: white</div>
+      </div>
+      <p style="margin-top:.75rem;">Accessibility note: primary + accent were chosen to meet WCAG contrast requirements for headings and action buttons. Contrast checks should be validated again after content is added.</p>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="card">
+      <h2>Typography</h2>
+      <p>Selected fonts (Google Fonts):</p>
+      <div class="type-sample">
+        <div class="type-card">
+          <h3 style="margin:.2rem 0 0 0;font-family:'Merriweather',serif;">Merriweather</h3>
+          <p style="margin:0;font-size:.9rem;">Use for headings and key callouts (H1–H3).</p>
+        </div>
+        <div class="type-card">
+          <h3 style="margin:.2rem 0 0 0;font-family:Inter,system-ui,sans-serif;">Inter</h3>
+          <p style="margin:0;font-size:.9rem;">Use for body text, navigation, and form labels for good legibility on screen.</p>
+        </div>
+      </div>
+      <p style="margin-top:.5rem;">Fallbacks: system fonts provided in CSS stack. Limit fonts to 2 for performance.</p>
+    </section>
+
+    <!-- WIREFRAMES -->
+    <section class="card">
+      <h2>Wireframe (Home Page)</h2>
+      <p>Below are simple visual wireframes that represent the layout relationships. These are schematic — content and spacing will be adjusted while building.</p>
+      <div class="wireframes">
+        <!-- Mobile wireframe -->
+        <div class="wireframe" aria-label="Mobile wireframe">
+          <strong>Mobile (stacked)</strong>
+          <div class="wf-block wf-header">Header: logo + title</div>
+          <div class="wf-block">Navigation (hamburger)</div>
+          <div class="wf-block">Hero: Project tagline + CTA (Volunteer)</div>
+          <div class="wf-block">Latest News / Timeline</div>
+          <div class="wf-block">Volunteer Signup Card</div>
+          <div class="wf-block">FAQ Preview</div>
+          <div class="wf-block wf-cta">Contact / Report Issue (CTA)</div>
+          <div class="wf-block">Footer: contacts, social</div>
+        </div>
+
+        <!-- Desktop wireframe -->
+        <div class="wireframe" aria-label="Desktop wireframe">
+          <strong>Desktop (two-column)</strong>
+          <div class="wf-block wf-header">Top bar: logo | nav | donate/volunteer CTA</div>
+          <div class="wf-block">Hero (wide) — image or engineering drawing teaser + CTA</div>
+          <div class="wf-block">Two-column region:</div>
+          <div class="wf-block">Left: Timeline & News</div>
+          <div class="wf-block">Right: Volunteer signup & quick facts</div>
+          <div class="wf-block">Downloads: engineering plans / PDFs</div>
+          <div class="wf-block wf-cta">Contact form / map (service area)</div>
+          <div class="wf-block">Footer: newsletter, credits, legal</div>
+        </div>
+      </div>
+      <p style="margin-top:.5rem;">Note: wireframes can be exported as images or redrawn in Figma for higher fidelity during the design phase.</p>
+    </section>
+
+    <!-- CSS NOTES -->
+    <section class="card">
+      <h2>CSS & Files</h2>
+      <ul>
+        <li><strong>Files:</strong> <code>index.html</code> (home), <code>siteplan.html</code> (this doc), <code>css/styles.css</code>, <code>img/logo.svg</code>, <code>docs/engineering/</code>.</li>
+        <li><strong>Structure:</strong> A light utility-first layout with container, grid, and card components. Keep variables in root for color/spacing/typography.</li>
+        <li><strong>Performance:</strong> Self-host fonts if possible (or preload Google Fonts). Minify CSS for production.</li>
+      </ul>
+    </section>
+
+    <!-- TESTING -->
+    <section class="card">
+      <h2>Testing & Validation Checklist</h2>
+      <ul>
+        <li>HTML validation: run pages through <strong>W3C Validator</strong>.</li>
+        <li>Accessibility: use <strong>axe</strong> or Lighthouse (contrast, semantic headings, ARIA where needed, form labels).</li>
+        <li>Color contrast: verify against WCAG 2.1 AA for text and UI elements.</li>
+        <li>SEO basics: title, meta description, structured data for events/volunteer opportunities.</li>
+        <li>Performance: Lighthouse scores, compress images (SVG for logos), lazy-load large assets.</li>
+        <li>Responsive checks: test on small phone, medium tablet, and large desktop breakpoints.</li>
+      </ul>
+    </section>
+
+    <footer style="margin-top:1.5rem;text-align:center;color:#6b6b6b;font-size:.9rem">
+      <p>&copy; 2025 Obinna Glory Chinaza N. | Last Modified: <span id="lastModified"></span></p>
+      <script>
+        document.getElementById('lastModified').textContent = document.lastModified;
+      </script>
+    </footer>
+  </div>
+</body>
+</html>
