@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review Form</title>
+  <meta name="author" content="Obinna Glory Chinaza N." />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script defer src="scripts/scripts.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review Form</h1>
+    <p>Please fill out the form below to submit your product review.</p>
+  </header>
+
+  <main>
+    <form id="reviewForm" method="get" action="review.html">
+      <!-- Product Name -->
+      <label for="productName">Product Name:</label>
+      <select id="productName" name="productName" required>
+        <option value="" selected>Select a Product ...</option>
+        <!-- Options will be added dynamically by JavaScript -->
+      </select>
+
+      <!-- Rating -->
+      <fieldset>
+        <legend>Overall Rating:</legend>
+        <div class="rating">
+          <input type="radio" id="star5" name="rating" value="5" required>
+          <label for="star5">☆</label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4">☆</label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3">☆</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2">☆</label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1">☆</label>
+        </div>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <label for="installDate">Date of Installation:</label>
+      <input type="date" id="installDate" name="installDate" required />
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Useful Features (check all that apply):</legend>
+        <div>
+          <input type="checkbox" id="feature1" name="features" value="durability">
+          <label for="feature1">Durability</label>
+        </div>
+        <div>
+          <input type="checkbox" id="feature2" name="features" value="design">
+          <label for="feature2">Design</label>
+        </div>
+        <div>
+          <input type="checkbox" id="feature3" name="features" value="efficiency">
+          <label for="feature3">Efficiency</label>
+        </div>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="writtenReview">Written Review:</label>
+      <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Write your review here..."></textarea>
+
+      <!-- User Name -->
+      <label for="userName">Your Name:</label>
+      <input type="text" id="userName" name="userName" placeholder="Optional" />
+
+      <!-- Submit -->
+      <input type="submit" value="Submit Review" />
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 💕💕 Obinna Glory Chinaza N. 💕💕 WDD 131 💕💕 Product Review Assignment</p>
+  </footer>
+</body>
+</html>
