@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Product Review Form</title>
+  <meta name="description" content="Submit your review for our smart home devices and innovative tech solutions at OwerriTech Innovations.">
+  <meta name="author" content="Obinna Glory Chinaza N.">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="review.html">Review</a></li>
+      </ul>
+    </nav>
+    <h1> OwerriTech Innovations</h1>
+    <div class="accent" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <!-- Form -->
+    <section id="formSection" class="card" aria-labelledby="formTitle">
+      <h1 id="formTitle">Product Review Form</h1>
+
+      <form id="reviewForm" method="get" action="review.html" novalidate>
+        <label for="productName">Product Name</label>
+        <select id="productName" name="productName" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+
+        <fieldset>
+          <legend>Overall Rating (required)</legend>
+          <!-- five radios, same name to allow single choice -->
+          <div class="rating" role="radiogroup" aria-label="Overall rating">
+            <input id="r5" type="radio" name="rating" value="5" required>
+            <label for="r5">★ 5</label>
+            <input id="r4" type="radio" name="rating" value="4">
+            <label for="r4">★ 4</label>
+            <input id="r3" type="radio" name="rating" value="3">
+            <label for="r3">★ 3</label>
+            <input id="r2" type="radio" name="rating" value="2">
+            <label for="r2">★ 2</label>
+            <input id="r1" type="radio" name="rating" value="1">
+            <label for="r1">★ 1</label>
+          </div>
+        </fieldset>
+
+        <label for="installDate">Date of Installation</label>
+        <input id="installDate" name="installDate" type="date" required>
+
+        <fieldset>
+          <legend>Useful Features</legend>
+          <div><input id="featDur" name="features" type="checkbox" value="durability"><label for="featDur">Durability</label></div>
+          <div><input id="featDesign" name="features" type="checkbox" value="design"><label for="featDesign">Design</label></div>
+          <div><input id="featEff" name="features" type="checkbox" value="efficiency"><label for="featEff">Efficiency</label></div>
+        </fieldset>
+
+        <label for="writtenReview">Written Review</label>
+        <textarea id="writtenReview" name="writtenReview" rows="5"></textarea>
+
+        <label for="userName">Your Name (optional)</label>
+        <input id="userName" name="userName" type="text">
+
+        <input type="submit" value="Submit Review">
+      </form>
+    </section>
+
+    <!-- Confirmation (hidden until submission) -->
+    <section id="confirmation" class="card visually-hidden" aria-live="polite">
+      <h2>Thank you for your review!</h2>
+      <p id="summary"></p>
+      <p>You have submitted <strong id="reviewCount">0</strong> review(s).</p>
+      <a href="review.html">Submit another review</a>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2025 💕💕 Obinna Glory Chinaza N. 💕💕 WDD 131 💕💕</p>
+    <a href="reference.html">References</a></footer>
+</body>
+</html>
